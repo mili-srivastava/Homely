@@ -20,10 +20,10 @@ export const POST = async(request:NextRequest) =>{
     // create new user
     const newUser = new User({
         name:name,
-        email,
-        password,
-        phone,
-        address
+        email:email,
+        password:password,
+        phone:phone,
+        address:address
     });
 
     // save user
@@ -37,4 +37,8 @@ export const POST = async(request:NextRequest) =>{
     
 
 
+}
+
+export const GET =() =>{
+   return NextResponse.json({status:405, message:"Invalid Request"});
 }
