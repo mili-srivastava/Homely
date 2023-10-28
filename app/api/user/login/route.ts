@@ -1,6 +1,7 @@
 import User from "@/models/User";
 import connectDB from "@/utils/mongoose";
 import { NextRequest, NextResponse } from "next/server"
+import * as bcrypt from "bcryptjs";
 
 connectDB();
 
@@ -19,9 +20,12 @@ export const POST = async (request:NextRequest) =>{
                 return NextResponse.json({status:404, message:"User not found"})
          }
 
-         // check if password is correct
+         // compare password
+         const isMatch = await bcrypt.compare(password, user.password);
 
-         if(password===user.password){
+
+
+         if(isMatch){
             return NextResponse.json({status:200, message:"Login successful"})
          }
 
