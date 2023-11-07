@@ -128,6 +128,23 @@ const Navbar = () => {
             <li>
               <Link href="/categories">Categories</Link>
             </li>
+            <div className="flex gap-2 justify-center items-center">
+
+            <li>
+              <Link href="/login" onClick={closeMenu}>
+                <button className="bg-primary text-white px-5 py-1 rounded-xl hover:bg-secondary ">
+                  Login
+                </button>
+              </Link>
+            </li>
+            <li>
+              <Link href="/signup" onClick={closeMenu}>
+                <button className="rounded-xl bg-secondary px-5 py-1 text-white hover:bg-primary ">
+                  Signup
+                </button>
+              </Link>
+            </li>
+            </div>
           </ul>
         </div>
         <div className="flex gap-5 items-center">
