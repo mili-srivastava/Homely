@@ -74,3 +74,16 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+/* ------------ custom styling ---------- */
+*{
+  font-family: var(--font-poppins);
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+    url("/images/ac.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
